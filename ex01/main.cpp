@@ -25,5 +25,8 @@ int main ()
 	Dog* copyDoge = new Dog(*dog);
 	delete dog;
 	std::cout << "This idea from copyDoge: "	<< copyDoge->getIdea(0) << std::endl;
+
+	std::cout << std::endl;
+	delete copyDoge;
 	return (0);
 }
