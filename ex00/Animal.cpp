@@ -1,11 +1,11 @@
 #include "Animal.hpp"
 
-void makeSound(void)
+void Animal::makeSound(void) const
 {
-	std::cout << "Animal sound!";
+	std::cout << "Animal sound!" << std::endl;
 }
 
-std::string Animal::getType(void)
+std::string Animal::getType(void) const
 {
 	return (type);
 }
