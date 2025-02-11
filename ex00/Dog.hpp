@@ -7,6 +7,8 @@ class Dog : public Animal
 {
 public:
 	void makeSound();
+	Dog();
+	~Dog();
 };
 
 
