@@ -10,11 +10,11 @@ protected:
 public:
 	std::string getType() const;
 	void setType(std::string);
-	void makeSound() const;
+	virtual void makeSound() const;
 	Animal();
 	Animal(const Animal&);
 	Animal& operator= (const Animal&);
-	~Animal();
+	virtual ~Animal();
 };
 
 

@@ -20,9 +20,10 @@ Animal::Animal()
 	std::cout << "Default Animal Constructor" << std::endl;
 }
 
-Animal::Animal(const Animal&)
+Animal::Animal(const Animal& animal)
 {
 	std::cout << "Animal Copy Constructor" << std::endl;
+	setType(animal.getType());
 }
 
 Animal& Animal::operator= (const Animal& animal)
@@ -30,7 +31,7 @@ Animal& Animal::operator= (const Animal& animal)
 	std::cout << "Animal Copy Assignment Operator" << std::endl;
 	if (this == &animal)
 		return (*this);
-	setType(animal.type);
+	setType(animal.getType());
 	return (*this);
 }
 

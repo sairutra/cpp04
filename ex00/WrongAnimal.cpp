@@ -20,22 +20,22 @@ WrongAnimal::WrongAnimal()
 	std::cout << "Default WrongAnimal Constructor" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal&)
+WrongAnimal::WrongAnimal(const WrongAnimal& animal)
 {
 	std::cout << "WrongAnimal Copy Constructor" << std::endl;
+	setType(animal.getType());
 }
 
-WrongAnimal& WrongAnimal::operator= (const WrongAnimal& Wronganimal)
+WrongAnimal& WrongAnimal::operator= (const WrongAnimal& animal)
 {
 	std::cout << "WrongAnimal Copy Assignment Operator" << std::endl;
-	if (this == &Wronganimal)
+	if (this == &animal)
 		return (*this);
-	setType(Wronganimal.type);
+	setType(animal.getType());
 	return (*this);
 }
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "WrongAnimal Copy Assignment Operator" << std::endl;
+	std::cout << "WrongAnimal Destructor" << std::endl;
 }
-
