@@ -5,6 +5,15 @@ void Cat::makeSound() const
 	std::cout << "Meow" << std::endl;
 }
 
+void Cat::addIdea(std::string idea)
+{
+	brain->addIdea(idea);
+}
+
+std::string Cat::getIdea(int index)
+{
+	return (brain->getIdea(index));
+}
 Cat::Cat()
 {
 	std::cout << "Default Cat Constructor" << std::endl;
@@ -12,7 +21,7 @@ Cat::Cat()
 	brain = new Brain();
 }
 
-Cat::Cat(const Cat& cat)
+Cat::Cat(const Cat& cat) : Animal(cat)
 {
 	std::cout << "Cat Copy Constructor" << std::endl;
 	setType(cat.getType());

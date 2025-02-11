@@ -28,8 +28,11 @@ void Brain::addIdea(std::string idea)
 	int index;
 
 	index = getIdeaIndex() + 1;
-	setIdeaIndex(index);
-	ideas[index] = idea;
+	if (index < numOfIdeas)
+	{
+		setIdeaIndex(index);
+		ideas[index] = idea;
+	}
 }
 
 Brain::Brain()

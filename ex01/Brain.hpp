@@ -9,9 +9,9 @@ class Brain
 {
 private:
 	std::string ideas[numOfIdeas];
-	int ideaIndex;
-	void deepCopy(const Brain&);
+	int ideaIndex = -1;
 public:
+	void deepCopy(const Brain&);
 	std::string getIdea(int) const;
 	int getIdeaIndex() const;
 	void setIdeaIndex(int);

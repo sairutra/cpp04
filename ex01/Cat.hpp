@@ -10,6 +10,8 @@ private:
 	Brain*	brain;
 public:
 	virtual void makeSound() const;
+	void addIdea(std::string);
+	std::string getIdea(int);
 	Cat();
 	Cat(const Cat&);
 	Cat& operator= (const Cat&);

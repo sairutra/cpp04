@@ -5,6 +5,16 @@ void Dog::makeSound() const
 	std::cout << "Woof" << std::endl;
 }
 
+void Dog::addIdea(std::string idea)
+{
+	brain->addIdea(idea);
+}
+
+std::string Dog::getIdea(int index) const
+{
+	return (brain->getIdea(index));
+}
+
 Dog::Dog()
 {
 	std::cout << "Default Dog Constructor" << std::endl;
@@ -12,10 +22,11 @@ Dog::Dog()
 	brain = new Brain;
 }
 
-Dog::Dog(const Dog& dog)
+Dog::Dog(const Dog& dog) : Animal(dog)
 {
 	std::cout << "Dog Copy Constructor" << std::endl;
 	setType(dog.getType());
+	brain = new Brain(*dog.brain);
 }
 
 Dog& Dog::operator= (const Dog& dog)
@@ -24,6 +35,7 @@ Dog& Dog::operator= (const Dog& dog)
 	if (this == &dog)
 		return (*this);
 	setType(dog.getType());
+	brain = new Brain(*dog.brain);
 	return (*this);
 }
 
