@@ -36,5 +36,5 @@ Animal& Animal::operator= (const Animal& animal)
 
 Animal::~Animal()
 {
-	std::cout << "Animal Copy Assignment Operator" << std::endl;
+	std::cout << "Animal Destructor" << std::endl;
 }
