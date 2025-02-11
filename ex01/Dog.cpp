@@ -9,6 +9,7 @@ Dog::Dog()
 {
 	std::cout << "Default Dog Constructor" << std::endl;
 	type = "Dog";
+	brain = new Brain;
 }
 
 Dog::Dog(const Dog& dog)
@@ -29,4 +30,5 @@ Dog& Dog::operator= (const Dog& dog)
 Dog::~Dog()
 {
 	std::cout << "Dog Destructor" << std::endl;
+	delete brain;
 }

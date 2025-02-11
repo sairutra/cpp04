@@ -9,6 +9,7 @@ Cat::Cat()
 {
 	std::cout << "Default Cat Constructor" << std::endl;
 	type = "Cat";
+	brain = new Brain();
 }
 
 Cat::Cat(const Cat& cat)
@@ -29,4 +30,5 @@ Cat& Cat::operator= (const Cat& cat)
 Cat::~Cat()
 {
 	std::cout << "Cat Destructor" << std::endl;
+	delete brain;
 }
