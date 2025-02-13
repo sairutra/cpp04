@@ -2,7 +2,7 @@
 
 void Cat::makeSound() const
 {
-	std::cout << "Meow" << std::endl;
+	std::cout << "Bark? ...... no jk, just meow" << std::endl;
 }
 
 Cat::Cat()
