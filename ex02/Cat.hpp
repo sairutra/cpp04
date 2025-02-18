@@ -11,7 +11,7 @@ private:
 public:
 	virtual void makeSound() const;
 	void addIdea(std::string);
-	std::string getIdea(int);
+	std::string getIdea(int) const;
 	Cat();
 	Cat(const Cat&);
 	Cat& operator= (const Cat&);

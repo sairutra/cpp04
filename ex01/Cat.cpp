@@ -10,7 +10,7 @@ void Cat::addIdea(std::string idea)
 	brain->addIdea(idea);
 }
 
-std::string Cat::getIdea(int index)
+std::string Cat::getIdea(int index) const
 {
 	return (brain->getIdea(index));
 }
