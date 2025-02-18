@@ -25,6 +25,7 @@ Cat::Cat(const Cat& cat) : Animal(cat)
 {
 	std::cout << "Cat Copy Constructor" << std::endl;
 	setType(cat.getType());
+	brain = new Brain(*cat.brain);
 }
 
 Cat& Cat::operator= (const Cat& cat)

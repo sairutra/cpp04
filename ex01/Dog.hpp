@@ -8,7 +8,6 @@ class Dog : public Animal
 {
 private:
 	Brain*	brain;
-	void deepCopy(const Dog&);
 public:
 	virtual void makeSound() const;
 	void addIdea(std::string);
