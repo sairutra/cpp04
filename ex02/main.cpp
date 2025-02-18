@@ -28,5 +28,18 @@ int main ()
 
 	std::cout << std::endl;
 	delete copyDoge;
+
+	std::cout << std::endl;
+	Cat* cat = new Cat;
+	cat->addIdea("Supah nice idea");
+	std::cout << "This idea from cat: " << cat->getIdea(0) << std::endl;
+
+	std::cout << std::endl;
+	Cat* copyCat = new Cat(*cat);
+	delete cat;
+	std::cout << "This idea from copyCat: "	<< copyCat->getIdea(0) << std::endl;
+
+	std::cout << std::endl;
+	delete copyCat;
 	return (0);
 }
